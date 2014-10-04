@@ -11,6 +11,7 @@ app.controller('MainCtrl', ['$scope', 'UserFactory', '$q', function($scope, User
 		for(var i=0;i<results.length;i++){
 			$scope.users.push(results[i].data);
 		}
+		console.log($scope.users);
 	}); 
 	
 	

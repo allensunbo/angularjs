@@ -7,8 +7,19 @@
 </head>
 <body ng-app="jwtApp" ng-controller="MainCtrl">
 <div>
-	<div class= "row">
-				<div ng-repeat="user in users"  class="col-md-4"><img ng-src="{{user.avatar}}"></img></div>
+	<div class= "row" >
+		<div ng-repeat="user in users"  class="col-md-3" style="border:1px dotted blue;padding:2px;">
+			<div>
+				<form role="form" class="col-md-6">
+					<div class="form-group">
+						<label style="width: 100%;">{{user.name}}</label>
+						<label style="width: 100%;">{{user.phone}}</label>
+					</div>
+				</form>
+			
+				<img ng-src="{{user.avatar}}" class="col-md-6"></img>
+			</div>
+		</div>
 	</div>
 </div>
 
