@@ -3,14 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
 </head>
 <body ng-app="jwtApp" ng-controller="MainCtrl">
-{{user |json}}
+<div>
+	<div class= "row">
+				<div ng-repeat="user in users"  class="col-md-4"><img ng-src="{{user.avatar}}"></img></div>
+	</div>
+</div>
 
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-<script>
-console.log(angular.version);
-</script>
 <script type="text/javascript" src="scripts/api.js"></script>
 </body>
 </html>
