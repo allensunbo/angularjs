@@ -8,16 +8,21 @@
 <body ng-app="jwtApp" ng-controller="MainCtrl">
 <div>
 	<div class= "row" >
-		<div ng-repeat="user in users"  class="col-md-3" style="border:1px dotted blue;padding:2px;">
-			<div>
-				<form role="form" class="col-md-6">
+		<div ng-repeat="user in users"  class="col-md-3" style="padding:20px;border-left: 1px solid gray;">
+			<div style="border-left: 1px solid gray;">
+				<form role="form" class="col-md-8">
 					<div class="form-group">
 						<label style="width: 100%;">{{user.name}}</label>
 						<label style="width: 100%;">{{user.phone}}</label>
+						<label style="width: 100%;">{{user.email}}</label>
+						<label style="width: 100%;">{{user.address.street}}</label>
+						<label style="width: 100%;">{{user.address.suite}}</label>
+						<label style="width: 100%;">{{user.address.city}}</label>
+						<label style="width: 100%;">{{user.address.zipcode}}</label>
 					</div>
 				</form>
 			
-				<img ng-src="{{user.avatar}}" class="col-md-6"></img>
+				<img ng-src="{{user.avatar}}" class="col-md-4"></img>
 			</div>
 		</div>
 	</div>
